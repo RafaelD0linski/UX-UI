@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emagrecimento e Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Emagrecimento e Bem-Estar</h1>
+        <nav>
+            <ul>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#progresso">Progresso</a></li>
+                <li><a href="#receitas">Receitas</a></li>
+                <li><a href="#exercicios">Exercícios</a></li>
+                <li><a href="#notificacoes">Notificações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="dicas">
+        <h2>Dicas para um Estilo de Vida Saudável</h2>
+        <ul>
+            <li>Coma alimentos naturais e evite ultraprocessados.</li>
+            <li>Faça exercícios regularmente, pelo menos 30 minutos por dia.</li>
+            <li>Beba bastante água e durma bem para uma melhor recuperação.</li>
+        </ul>
+    </section>
+
+    <section id="progresso">
+        <h2>Monitoramento de Progresso</h2>
+        <label for="peso">Insira seu peso atual (kg):</label>
+        <input type="number" id="peso" placeholder="Ex: 70">
+        <button onclick="adicionarPeso()">Adicionar</button>
+        <canvas id="graficoPeso"></canvas>
+    </section>
+
+    <section id="receitas">
+        <h2>Receitas Saudáveis</h2>
+        <p>Confira receitas fáceis e nutritivas para sua dieta!</p>
+        <ul>
+            <li><img src="salada.jpg" alt="Salada de Quinoa"> Salada de Quinoa com Frango</li>
+            <li><img src="suco.jpg" alt="Suco Detox"> Suco Detox Verde</li>
+            <li><img src="panqueca.jpg" alt="Panqueca de Aveia"> Panqueca de Aveia e Banana</li>
+        </ul>
+    </section>
+
+    <section id="exercicios">
+        <h2>Plano de Exercícios</h2>
+        <p>Treinos diários para manter o corpo ativo.</p>
+        <ul>
+            <li><video controls><source src="cardio.mp4" type="video/mp4"></video> Cardio: Corrida ou caminhada</li>
+            <li><video controls><source src="musculacao.mp4" type="video/mp4"></video> Força: Treino de musculação</li>
+            <li><video controls><source src="yoga.mp4" type="video/mp4"></video> Alongamento: Yoga e mobilidade</li>
+        </ul>
+    </section>
+
+    <section id="notificacoes">
+        <h2>Notificações e Lembretes</h2>
+        <button onclick="ativarNotificacoes()">Ativar Notificações</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Emagrecimento e Bem-Estar</p>
+    </footer>
+</body>
+</html>
