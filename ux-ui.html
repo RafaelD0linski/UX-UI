@@ -1,70 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Emagrecimento e Bem-Estar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Emagrecimento e Bem-Estar</h1>
+        <h1><i class="fas fa-heartbeat"></i> Emagrecimento e Bem-Estar</h1>
         <nav>
             <ul>
-                <li><a href="#dicas">Dicas</a></li>
-                <li><a href="#progresso">Progresso</a></li>
-                <li><a href="#receitas">Receitas</a></li>
-                <li><a href="#exercicios">Exercícios</a></li>
-                <li><a href="#notificacoes">Notificações</a></li>
+                <li><a href="#dicas"><i class="fas fa-lightbulb"></i> Dicas</a></li>
+                <li><a href="#progresso"><i class="fas fa-chart-line"></i> Progresso</a></li>
+                <li><a href="#receitas"><i class="fas fa-utensils"></i> Receitas</a></li>
+                <li><a href="#exercicios"><i class="fas fa-dumbbell"></i> Exercícios</a></li>
+                <li><a href="#notificacoes"><i class="fas fa-bell"></i> Notificações</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="dicas">
-        <h2>Dicas para um Estilo de Vida Saudável</h2>
-        <ul>
-            <li>Coma alimentos naturais e evite ultraprocessados.</li>
-            <li>Faça exercícios regularmente, pelo menos 30 minutos por dia.</li>
-            <li>Beba bastante água e durma bem para uma melhor recuperação.</li>
-        </ul>
-    </section>
+    <main>
+        <section id="dicas">
+            <h2>Dicas para um Estilo de Vida Saudável</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Alimentação</h3>
+                    <p>Coma alimentos naturais e evite ultraprocessados.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-running"></i>
+                    <h3>Exercícios</h3>
+                    <p>Faça exercícios regularmente, pelo menos 30 minutos por dia.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bed"></i>
+                    <h3>Descanso</h3>
+                    <p>Beba bastante água e durma bem para uma melhor recuperação.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="progresso">
-        <h2>Monitoramento de Progresso</h2>
-        <label for="peso">Insira seu peso atual (kg):</label>
-        <input type="number" id="peso" placeholder="Ex: 70">
-        <button onclick="adicionarPeso()">Adicionar</button>
-        <canvas id="graficoPeso"></canvas>
-    </section>
+        <section id="progresso">
+            <h2>Monitoramento de Progresso</h2>
+            <div class="progress-container">
+                <div class="input-group">
+                    <label for="peso">Insira seu peso atual (kg):</label>
+                    <input type="number" id="peso" placeholder="Ex: 70" min="30" max="300" step="0.1" />
+                    <button onclick="adicionarPeso()"><i class="fas fa-plus"></i> Adicionar</button>
+                </div>
+                <div class="chart-container">
+                    <canvas id="graficoPeso"></canvas>
+                </div>
+            </div>
+        </section>
 
-    <section id="receitas">
-        <h2>Receitas Saudáveis</h2>
-        <p>Confira receitas fáceis e nutritivas para sua dieta!</p>
-        <ul>
-            <li><img src="salada.jpg" alt="Salada de Quinoa"> Salada de Quinoa com Frango</li>
-            <li><img src="suco.jpg" alt="Suco Detox"> Suco Detox Verde</li>
-            <li><img src="panqueca.jpg" alt="Panqueca de Aveia"> Panqueca de Aveia e Banana</li>
-        </ul>
-    </section>
+        <section id="receitas">
+            <h2>Receitas Saudáveis</h2>
+            <p class="section-description">Confira receitas fáceis e nutritivas para sua dieta!</p>
+            <div class="cards-container">
+          
+              <div class="recipe-card">
+                <iframe width="320" height="180" 
+                  src="https://www.youtube.com/embed/3qG_Tx6U16k" 
+                  title="Salada de Quinoa com Frango" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+                <h3>Salada de Quinoa com Frango</h3>
+                <p>Uma refeição rica em proteínas e nutrientes.</p>
+                <button class="recipe-btn">Ver Receita</button>
+              </div>
+          
+              <div class="recipe-card">
+                <iframe width="320" height="180" 
+                  src="https://www.youtube.com/embed/L4KDvDZaB68" 
+                  title="Wrap de Atum com Vegetais" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+                <h3>Wrap de Atum com Vegetais</h3>
+                <p>Ideal para um lanche saudável e rápido.</p>
+                <button class="recipe-btn">Ver Receita</button>
+              </div>
+          
+              <div class="recipe-card">
+                <iframe width="320" height="180" 
+                  src="https://www.youtube.com/embed/R0K5rMf5Mqk" 
+                  title="Suco Detox Verde" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+                <h3>Suco Detox Verde</h3>
+                <p>Refrescante e desintoxicante.</p>
+                <button class="recipe-btn">Ver Receita</button>
+              </div>
+          
+            </div>
+          </section>
 
-    <section id="exercicios">
-        <h2>Plano de Exercícios</h2>
-        <p>Treinos diários para manter o corpo ativo.</p>
-        <ul>
-            <li><video controls><source src="cardio.mp4" type="video/mp4"></video> Cardio: Corrida ou caminhada</li>
-            <li><video controls><source src="musculacao.mp4" type="video/mp4"></video> Força: Treino de musculação</li>
-            <li><video controls><source src="yoga.mp4" type="video/mp4"></video> Alongamento: Yoga e mobilidade</li>
-        </ul>
-    </section>
+        <section id="exercicios">
+            <h2>Plano de Exercícios</h2>
+            <p class="section-description">Treinos diários para manter o corpo ativo.</p>
 
-    <section id="notificacoes">
-        <h2>Notificações e Lembretes</h2>
-        <button onclick="ativarNotificacoes()">Ativar Notificações</button>
-    </section>
+            <div class="exercise-card">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/QZjuHeAn8wE"
+                    title="Cardio" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h3>Cardio</h3>
+                <p>Corrida ou caminhada – 30 minutos</p>
+                <button class="exercise-btn">Iniciar Treino</button>
+            </div>
+
+            <div class="exercise-card">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/QVAmbJrlyvk"
+                    title="Força" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h3>Força</h3>
+                <p>Treino de musculação - 45 minutos</p>
+                <button class="exercise-btn">Iniciar Treino</button>
+            </div>
+
+            <div class="exercise-card">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/Eml2xnoLpYE"
+                    title="Alongamento" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h3>Alongamento</h3>
+                <p>Yoga e mobilidade - 20 minutos</p>
+                <button class="exercise-btn">Iniciar Treino</button>
+            </div>
+        </section>
+
+        <section id="notificacoes">
+            <h2>Notificações e Lembretes</h2>
+            <div class="notifications-container">
+                <p>Receba lembretes para manter sua rotina saudável!</p>
+                <button onclick="ativarNotificacoes()" class="notification-btn">
+                    <i class="fas fa-bell"></i> Ativar Notificações
+                </button>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Emagrecimento e Bem-Estar</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Emagrecimento e Bem-Estar</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
